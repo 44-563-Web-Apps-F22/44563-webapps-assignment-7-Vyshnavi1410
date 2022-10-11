@@ -43,6 +43,8 @@
 	<button onclick="makeNewDiv()">Add value</button>
 
 	<input type="text" id="element">
+	<button type="button" onclick="get()">Get</button>
+	<button type="button" onclick="spin()">Spin</button>
 
 </body>
 <script>
@@ -57,6 +59,23 @@
 		let container = document.getElementById('target')
 		container.appendChild(element)
 
+	}
+
+	function get(){
+		var cyclerItems = document.getElementsByClassName("cycler");
+		if(cyclerItems.length > 0){
+			cyclerItems[cyclerItems.length-1].remove();
+		}
+	}
+
+	function spin(){
+		var cyclerItems = document.getElementsByClassName("cycler");
+		if(cyclerItems.length > 1){
+			let container = document.getElementById('target');
+			var removedItem = cyclerItems[cyclerItems.length-1];
+			cyclerItems[cyclerItems.length-1].remove();
+			container.insertBefore(removedItem,container.firstChild);
+		}
 	}
 </script>
 
