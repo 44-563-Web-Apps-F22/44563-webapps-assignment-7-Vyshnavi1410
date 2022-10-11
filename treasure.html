@@ -144,10 +144,10 @@
 
     <script>
         var ids = ['img1','img2','img3','img4','img5','img6','img7','img8','img9','img10','img11','img12','img13','img14','img15','img16','img17','img18','img19','img20','img21','img22','img23','img24','img25'];
-        var chestCount = 0;
-        var score = 0;
-        var lastCheck = 12;
-        var treasureLocation = 13;
+        let chestCount = 0;
+        let score = 0;
+        let lastCheck = 12;
+        let treasureLocation = 18;
         function check(position){
             var imgId = ids[position];
             if(position == treasureLocation){ 
@@ -163,10 +163,10 @@
             lastCheck = position;
         }
         function help(){
-            var columnlast = lastCheck % 5;
-            var rowlast = Math.floor(lastCheck / 5 );
-            var treasureColumn = treasureLocation % 5;
-            var treasureRow = Math.floor(treasureLocation / 5);
+            let columnlast = lastCheck % 5;
+            let rowlast = Math.floor(lastCheck / 5 );
+            let treasureColumn = treasureLocation % 5;
+            let treasureRow = Math.floor(treasureLocation / 5);
             score = score + 2;
             document.getElementById("score").innerHTML = "Score is "+score;
             if(treasureRow == rowlast){
