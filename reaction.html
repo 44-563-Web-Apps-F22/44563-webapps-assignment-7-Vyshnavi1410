@@ -14,7 +14,7 @@
 <body>
   
   <h2>Timeout - Red in 3 seconds</h2>
-  <h1>reaction timer by Vyshnavi Kattamuri</h1>
+  <h1> Vyshnavi Kattamuri reaction timer </h1>
   <div id="target">Your time</div>
   <div id="countdown">COUNT</div>
   <button type="button"  onclick="startTime()">Start Timer</button>
@@ -37,7 +37,7 @@
         }
         else{
           var buttonTime = Date.now();
-          document.getElementById("target").innerHTML = "Time was " + (myTime - buttonTime);
+          document.getElementById("target").innerHTML = "Time was " + (buttonTime - myTime);
         }
       },3000);
     }
