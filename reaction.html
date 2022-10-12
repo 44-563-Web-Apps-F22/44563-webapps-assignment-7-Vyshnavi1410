@@ -27,8 +27,11 @@
     }
 
     function startTime(){
-      for(let i = 0; i < 4; i++){
-        setTimeout(()=>{document.getElementById("countdown").innerHTML=i},(3-i)*1000);
+      const  countDown = Math.random() * 9;
+      let randomvalue = Math.floor(countDown) + 2;
+      console.log(randomvalue);
+      for(let i = 0; i < randomvalue; i++){
+        setTimeout(()=>{document.getElementById("countdown").innerHTML=i},(randomvalue-i)*1000);
       }
 
       setTimeout(function(){
